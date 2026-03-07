@@ -30,7 +30,7 @@ public class UserController {
     }
 
 
-    @RequestMapping(value="/change-password", method=RequestMethod.PUT)
+    @RequestMapping(value="/change-password", method=RequestMethod.POST)
     public String changePassword(@RequestBody PasswordChangeRequest request) {
         return userService.changePassword(
                 request.getEmail(),
